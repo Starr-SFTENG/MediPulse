@@ -1,0 +1,63 @@
+<!-- products.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MediPulse Pharmacy — Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="products-full">
+    <header class="container">
+        <nav class="navbar">
+            <div class="brand">
+                <div class="logo">MDP</div>
+                <div>
+                    <div style="font-size:0.95rem">MediPulse Pharmaceuticals</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="branches.html">Branches</a><a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section small">
+            <div class="section-title">Products & Services</div>
+            <p class="small-muted">Browse our categories and use the filters to find what you need. For prescription meds, bring your physical prescription to a branch or contact us for guidance.</p>
+
+            <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
+                <select id="product-filter" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);">
+          <option value="all">All categories</option>
+          <option value="OTC">OTC</option>
+          <option value="Prescription">Prescription</option>
+          <option value="Supplements">Supplements</option>
+          <option value="Equipment">Equipment</option>
+          <option value="Personal Care">Personal Care</option>
+        </select>
+                <input id="product-search" placeholder="Search products..." style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);flex:1;">
+            </div>
+
+            <div id="products-app" style="margin-top:18px"></div>
+        </section>
+
+        <section class="section small">
+            <a class="btn btn-outline" href="index.html">Back to Home</a>
+        </section>
+
+        <footer class="footer">
+            <div>© <span id="year2"></span> MediPulse Pharmaceuticals</div>
+        </footer>
+    </main>
+
+    <script src="java/main.js"></script>
+    <script>
+        document.getElementById('year2').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
